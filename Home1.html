@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Coffee_Home</title>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="StyleHome1.css">
+</head>
+<body>
+<div id="container">
+    <header> Everything starts with <span class="coffee"> COFFEE</span></header>
+    <div id="menu">
+        <ul id="menuUl">
+            <li class="menuLi"> <a href="Home1.html" class="menuA"> Home </a></li>
+            <li class="menuLi"> <a href="#"  class="menuA"> News </a>
+                <ul class="submenu">
+                    <li><a href="#" >Sub1</a> </li>
+                    <li><a href="#" >Sub2</a> </li>
+                    <li><a href="#" >Sub3</a> </li>
+                </ul>
+            </li>
+            <li class="menuLi"> <a href="Contacts.html"  class="menuA"> Contacts </a> </li>
+            <li id="login" class="menuLi"> <a  href="#"  class="buttonLog"> Log in </a> </li>
+        </ul>
+    </div>
+
+    <form name="login-form" id="login-form" method="post" action="" >
+
+        <div class="content">
+            <input name="username" type="text" class="inputLog" value="Логин"  />
+            <input name="password" type="password" class="inputLog" value="Пароль"  />
+        </div>
+
+        <div class="footer">
+            <input type="submit" name="submit" value="ВОЙТИ" class="button" />
+            <a href="Registration.html">Регистрация</a>
+        </div>
+
+    </form>
+
+    <article>
+       <p> Много текста про кофе </p>
+    </article>
+
+    <aside>
+    <nav>
+        <p> <a href="Home1.html">Ссылка1</a> </p>
+        <p> <a href="Home1.html">Ссылка2</a> </p>
+        <p> <a href="Home1.html">Ссылка3</a> </p>
+        <p> <a href="Home1.html">Ссылка4</a> </p>
+        <p> <a href="Home1.html">Ссылка5</a> </p>
+    </nav>
+    </aside>
+
+
+    <footer>$copy; Харченко Виктория КС-32</footer>
+ </div>
+
+<script type="text/javascript">
+    $(document).ready(function (){
+        $(".buttonLog").click(function () {
+            $("#login-form").css({"display":"block"});
+        });
+        $("#login-form").mouseleave(function () {
+            $("#login-form").css({"display":"none"});
+        })
+    });
+</script>
+
+</body>
+</html>
