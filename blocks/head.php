@@ -5,9 +5,9 @@
             <li class="menuLi"> <a href="index.php" class="menuA"> Home </a></li>
             <li class="menuLi"> <a href="#"  class="menuA"> News </a>
                 <ul class="submenu">
-                    <li><a href="#" >Sub1</a> </li>
-                    <li><a href="#" >Sub2</a> </li>
-                    <li><a href="#" >Sub3</a> </li>
+                    <li><a href="#" >Categories</a></li>
+                    <li><a href="#" >All news</a> </li>
+                    <li><a href="#" >Search</a> </li>
                 </ul>
             </li>
             <li class="menuLi"> <a href="Contacts.php"  class="menuA"> Contacts </a> </li>

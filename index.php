@@ -15,9 +15,7 @@
 
     <?php include "blocks/login.php"; ?>
 
-    <article>
-       <p> Много текста про кофе </p>
-    </article>
+    <?php include  "blocks/face.php"; ?>
 
     <aside>
     <nav>
@@ -34,17 +32,6 @@
         <?php include "blocks/footer.php"; ?>
     </div>
  </div>
-
-<script type="text/javascript">
-    $(document).ready(function (){
-        $(".buttonLog").click(function () {
-            $("#login-form").css({"display":"block"});
-        });
-        $("#login-form").mouseleave(function () {
-            $("#login-form").css({"display":"none"});
-        })
-    });
-</script>
 
 </body>
 </html>
