@@ -8,35 +8,12 @@
 </head>
 <body>
 <div id="container">
-    <header> Everything starts with <span class="coffee"> COFFEE</span></header>
-    <div id="menu">
-        <ul id="menuUl">
-            <li class="menuLi"> <a href="Home1.html" class="menuA"> Home </a></li>
-            <li class="menuLi"> <a href="#"  class="menuA"> News </a>
-                <ul class="submenu">
-                    <li><a href="#" >Sub1</a> </li>
-                    <li><a href="#" >Sub2</a> </li>
-                    <li><a href="#" >Sub3</a> </li>
-                </ul>
-            </li>
-            <li class="menuLi"> <a href="Contacts.html"  class="menuA"> Contacts </a> </li>
-            <li id="login" class="menuLi"> <a  href="#"  class="buttonLog"> Log in </a> </li>
-        </ul>
+
+    <div class="head">
+        <?php include "blocks/head.php"; ?>
     </div>
 
-    <form name="login-form" id="login-form" method="post" action="" >
-
-        <div class="content">
-            <input name="username" type="text" class="inputLog" value="Логин"  />
-            <input name="password" type="password" class="inputLog" value="Пароль"  />
-        </div>
-
-        <div class="footer">
-            <input type="submit" name="submit" value="ВОЙТИ" class="button" />
-            <a href="Registration.html">Регистрация</a>
-        </div>
-
-    </form>
+    <?php include "blocks/login.php"; ?>
 
     <article>
         <div class="gMAp">
@@ -61,7 +38,9 @@
         </nav>
     </aside>
 
-    <footer>$copy; Харченко Виктория КС-32</footer>
+    <div class="bottom">
+        <?php include "blocks/footer.php"; ?>
+    </div>
 </div>
 </body>
 </html>

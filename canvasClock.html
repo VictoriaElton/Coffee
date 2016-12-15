@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Canvas clock</title>
+    <script>
+        function load() {
+            var canvas=document.getElementById("clock");
+            var ctx=canvas.getContext("2d");
+
+            var width=canvas.width,height=canvas.height;
+
+            var position_s=new Date().getSeconds()*(6*Math.PI/180),
+                position_m=new Date().getMinutes()*60*(1/10*Math.PI/180),
+                position_h=new Date().getHours()*3600*(1/120*Math.PI/180)+new Date().getMinutes()*60*(1/120*Math.PI/180);
+
+            function alarm(){
+                //первый аргумент - градус поворота стрелки
+                //второй - длина стрелки в "px"
+                //третий - толщина стрелки в "px"
+                function line(pos,r,w){
+                    ctx.lineWidth=w||1;
+                    ctx.beginPath();
+                    ctx.moveTo(width/2,height/2);
+                    ctx.lineTo(width/2+r*Math.cos(pos-Math.PI/2),
+                        height/2+r*Math.sin(pos-Math.PI/2));
+                    ctx.stroke();
+                    ctx.closePath();
+                }
+                position_s+=(6*Math.PI/180);
+                position_m+=(1/10*Math.PI/180);
+                position_h+=(1/120*Math.PI/180);
+
+                ctx.clearRect (0, 0, width, height);//Очистка
+
+                for(var i=0;i<=Math.PI*2;i+=Math.PI*2/12){
+                    ctx.beginPath();
+                    ctx.arc(width/2+57*Math.cos(i),
+                        height/2+57*Math.sin(i),
+                        2,0,2*Math.PI);
+                    ctx.fill();
+                    ctx.closePath();
+                }
+
+                line(position_h,35,3);
+                line(position_m,45,2);
+                line(position_s,55);
+            }
+
+            setInterval(alarm,1000);
+        }
+
+    </script>
+
+</head>
+<body onload="load()">
+<canvas id="clock", width="300px" height="200px"/>
+
+
+</body>
+</html>
